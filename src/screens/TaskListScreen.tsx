@@ -61,7 +61,7 @@ const useStyles = (palette: Palette) =>
     },
     addButtonText: {
       marginTop: -4,
-      color: palette.background,
+      color: '#fff',
       fontSize: 32,
       lineHeight: 32,
       fontWeight: '600',

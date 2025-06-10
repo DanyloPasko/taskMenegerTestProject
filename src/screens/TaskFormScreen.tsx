@@ -66,7 +66,7 @@ export default function TaskFormScreen({ navigation, route }: Props) {
       <Text style={styles.label}>Title</Text>
       <TextInput
         placeholder="Title"
-        placeholderTextColor={palette.text + '99'}
+        placeholderTextColor={'grey'}
         value={title}
         onChangeText={setTitle}
         style={styles.input}
@@ -74,7 +74,7 @@ export default function TaskFormScreen({ navigation, route }: Props) {
       <Text style={styles.label}>Description</Text>
       <TextInput
         placeholder="Description"
-        placeholderTextColor={palette.text + '99'}
+        placeholderTextColor={'grey'}
         value={description}
         onChangeText={setDescription}
         style={[styles.input, styles.multilineInput]}
@@ -116,7 +116,7 @@ const useStyles = (palette: Palette) =>
     container: { padding: 16, flex: 1, backgroundColor: palette.background },
     input: {
       borderWidth: 1,
-      borderColor: palette.text + '33',
+      borderColor: 'grey',
       padding: 12,
       borderRadius: 8,
       backgroundColor: palette.background,
@@ -146,7 +146,7 @@ const useStyles = (palette: Palette) =>
       marginHorizontal: 4,
       borderRadius: 20,
       borderWidth: 1,
-      borderColor: palette.text + '33',
+      borderColor: 'grey',
       alignItems: 'center',
       backgroundColor: palette.background,
     },
@@ -160,7 +160,7 @@ const useStyles = (palette: Palette) =>
       fontWeight: '500',
     },
     priorityTextActive: {
-      color: palette.background,
+      color: palette.text === '#fff' ? '#121212' : '#fff',
       fontWeight: '700',
     },
     saveButton: {
@@ -171,7 +171,7 @@ const useStyles = (palette: Palette) =>
       alignItems: 'center',
     },
     saveButtonText: {
-      color: palette.background === '#fff' ? '#fff' : '#121212',
+      color: palette.text === '#fff' ? '#121212' : '#fff',
       fontSize: 16,
       fontWeight: '600',
     },
